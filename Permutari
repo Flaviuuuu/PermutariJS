@@ -21,3 +21,35 @@ function permute(n){
         s[k]++;
       }
     }
+  if (valid) {
+      if (k == n - 1) {
+        console.log(s);
+      } else {
+        k++;
+        s[k] = 0;
+      }
+
+    } else {
+      k--;
+    }
+
+  }
+
+}
+
+
+
+function ver(s,k) {
+
+    for (var i = 0; i < k; i++) {
+        for (var j = i + 1; j < s.length; j++) {
+            if (s[i] == s[j]) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+
+}
+console.log(permute(3));
